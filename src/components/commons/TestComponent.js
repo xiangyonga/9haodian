@@ -20,7 +20,7 @@ class TestComponent extends Component {
 	render (){
 		return (
 				<div style={{color:this.state.theme}}>
-					<h1>Hello World</h1>
+					<h1>Hello</h1>
 					<p> { this.props.message } </p>
 				</div>
 			)
