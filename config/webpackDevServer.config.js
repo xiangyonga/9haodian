@@ -80,7 +80,15 @@ module.exports = function(proxy, allowedHost) {
       disableDotRule: true,
     },
     public: allowedHost,
-    proxy,
+    proxy: {
+        '/jd': {
+            target:'https://uranus.jd.com/',
+            changeOrigin:true,
+            pathRewrite:{
+                '^/jd': ''
+            }
+        }
+    },
     before(app) {
       // This lets us open files from the runtime error overlay.
       app.use(errorOverlayMiddleware());
