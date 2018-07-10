@@ -14,20 +14,30 @@ class Advert extends Component {
 
 	// 	//组件的状态
 		this.state = {
-			theme :'red'
+			isshow :true
 		}
+		this.closes = this.closes.bind(this)
 	}
 	closes(){
-		console.log(this.el)
-		this.setState({ display: "none" })
+		this.setState({isshow:false})
+	}
+	boxisshow(){
+		if(this.state.isshow){
+			return(
+				<div className="advert">
+					<div className="img">
+						<img src="/production.png"/>
+						<span onClick={ this.closes }>&times;</span>
+					</div>
+				</div>
+				)
+		}
+		return ''
 	}
 	render (){
 		return (
-				<div className="advert" ref = { el => this.el = el }>
-				<div className="img">
-					<img src="/production.png"/>
-					<span onClick={ this.closes.bind(this) }>&times;</span>
-				</div>
+				<div>
+					{this.boxisshow()}
 				</div>
 			)
 	}
