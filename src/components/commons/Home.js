@@ -2,13 +2,14 @@
 
 //Component是react中自带的标准父类，所有组件的类都需要继承它的属性和方法
 import React,{Component} from 'react'
-import Advert from "./Advert"
+import Advert from './Advert'
+import "./Home.scss"
 
 
 //在16版本中，组件的写法有很多种：有状态组件（最普通、常见的组件），无状态组件，高阶级组件
 //最普通的组件就是一个类，需要继承Component父类
 
-class TestComponent extends Component {
+class Home extends Component {
 	constructor(props, context) {
 		super(props);//是父类的构造器
 
@@ -20,9 +21,8 @@ class TestComponent extends Component {
 	}
 	render (){
 		return (
-				<div style={{color:this.state.theme}}>
+				<div className="home">
 					<Advert/>
-					<p> { this.props.message } </p>
 				</div>
 			)
 	}
@@ -30,8 +30,8 @@ class TestComponent extends Component {
 
 
 //组件设置默认属性的方法
-TestComponent.defaultProps = {
+Home.defaultProps = {
 	message: 'this is a react demo'
 }
 
-export default TestComponent 
+export default Home 

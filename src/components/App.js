@@ -3,12 +3,13 @@ import React, { Component } from 'react';
 
 
 import TestComponent from './commons/TestComponent'
+import Home from './commons/Home'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <TestComponent  message = {""}/>
+     		<Home/>
       </div>
     );
   }

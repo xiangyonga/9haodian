@@ -1,3 +1,22 @@
+git 第一次使用
+npm i
+npm init -y //生成package.json文件
+git init    //生成.git文件
+git status  //查看状态
+git add .   //添加到...库
+git status  //查看状态
+git commit -m "first" //哪个版本
+git remote add origin git@github.com:xiangyonga/9haodian.git  //上传
+git push -u origin master
+
+git下载项目git clone git@github.com:xiangyonga/9haodian.git
+
+
+下载后 第一次上传与第二次上传不一样
+第二次上传是：git push 搞定
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
